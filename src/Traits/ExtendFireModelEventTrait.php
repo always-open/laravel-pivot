@@ -9,8 +9,6 @@ trait ExtendFireModelEventTrait
      *
      * @param string $event
      * @param bool   $halt
-     *
-     * @return mixed
      */
     public function fireModelEvent($event, $halt = true, $relationName = null, $ids = [], $idsAttributes = [])
     {

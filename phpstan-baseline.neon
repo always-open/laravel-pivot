@@ -1,0 +1,115 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to protected method fireModelEvent\(\) of class Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: method.protected
+			count: 6
+			path: src/Relations/BelongsToManyCustom.php
+
+		-
+			message: '#^Method Fico7489\\Laravel\\Pivot\\Relations\\BelongsToManyCustom\:\:attach\(\) with return type void returns false but should not return anything\.$#'
+			identifier: return.void
+			count: 1
+			path: src/Relations/BelongsToManyCustom.php
+
+		-
+			message: '#^Method Fico7489\\Laravel\\Pivot\\Relations\\BelongsToManyCustom\:\:attach\(\) with return type void returns null but should not return anything\.$#'
+			identifier: return.void
+			count: 1
+			path: src/Relations/BelongsToManyCustom.php
+
+		-
+			message: '#^Method Fico7489\\Laravel\\Pivot\\Relations\\BelongsToManyCustom\:\:detach\(\) should return int but returns false\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Relations/BelongsToManyCustom.php
+
+		-
+			message: '#^Method Fico7489\\Laravel\\Pivot\\Relations\\BelongsToManyCustom\:\:updateExistingPivot\(\) should return int but returns false\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Relations/BelongsToManyCustom.php
+
+		-
+			message: '#^Method Illuminate\\Database\\Eloquent\\Model\:\:fireModelEvent\(\) invoked with 4 parameters, 1\-2 required\.$#'
+			identifier: arguments.count
+			count: 2
+			path: src/Relations/BelongsToManyCustom.php
+
+		-
+			message: '#^Method Illuminate\\Database\\Eloquent\\Model\:\:fireModelEvent\(\) invoked with 5 parameters, 1\-2 required\.$#'
+			identifier: arguments.count
+			count: 4
+			path: src/Relations/BelongsToManyCustom.php
+
+		-
+			message: '#^Result of method Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany\<Illuminate\\Database\\Eloquent\\Model,Illuminate\\Database\\Eloquent\\Model,Illuminate\\Database\\Eloquent\\Relations\\Pivot,string\>\:\:attach\(\) \(void\) is used\.$#'
+			identifier: staticMethod.void
+			count: 1
+			path: src/Relations/BelongsToManyCustom.php
+
+		-
+			message: '#^Call to protected method fireModelEvent\(\) of class Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: method.protected
+			count: 6
+			path: src/Relations/MorphToManyCustom.php
+
+		-
+			message: '#^Method Fico7489\\Laravel\\Pivot\\Relations\\MorphToManyCustom\:\:attach\(\) with return type void returns false but should not return anything\.$#'
+			identifier: return.void
+			count: 1
+			path: src/Relations/MorphToManyCustom.php
+
+		-
+			message: '#^Method Fico7489\\Laravel\\Pivot\\Relations\\MorphToManyCustom\:\:attach\(\) with return type void returns null but should not return anything\.$#'
+			identifier: return.void
+			count: 1
+			path: src/Relations/MorphToManyCustom.php
+
+		-
+			message: '#^Method Fico7489\\Laravel\\Pivot\\Relations\\MorphToManyCustom\:\:detach\(\) should return int but returns false\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Relations/MorphToManyCustom.php
+
+		-
+			message: '#^Method Fico7489\\Laravel\\Pivot\\Relations\\MorphToManyCustom\:\:updateExistingPivot\(\) should return int but returns false\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Relations/MorphToManyCustom.php
+
+		-
+			message: '#^Method Illuminate\\Database\\Eloquent\\Model\:\:fireModelEvent\(\) invoked with 4 parameters, 1\-2 required\.$#'
+			identifier: arguments.count
+			count: 2
+			path: src/Relations/MorphToManyCustom.php
+
+		-
+			message: '#^Method Illuminate\\Database\\Eloquent\\Model\:\:fireModelEvent\(\) invoked with 5 parameters, 1\-2 required\.$#'
+			identifier: arguments.count
+			count: 4
+			path: src/Relations/MorphToManyCustom.php
+
+		-
+			message: '#^Result of method Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany\<Illuminate\\Database\\Eloquent\\Model,Illuminate\\Database\\Eloquent\\Model,Illuminate\\Database\\Eloquent\\Relations\\MorphPivot,string\>\:\:attach\(\) \(void\) is used\.$#'
+			identifier: staticMethod.void
+			count: 1
+			path: src/Relations/MorphToManyCustom.php
+
+		-
+			message: '#^Trait Fico7489\\Laravel\\Pivot\\Traits\\ExtendFireModelEventTrait is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Traits/ExtendFireModelEventTrait.php
+
+		-
+			message: '#^Trait Fico7489\\Laravel\\Pivot\\Traits\\ExtendRelationsTrait is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Traits/ExtendRelationsTrait.php
+
+		-
+			message: '#^Trait Fico7489\\Laravel\\Pivot\\Traits\\PivotEventTrait is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Traits/PivotEventTrait.php
