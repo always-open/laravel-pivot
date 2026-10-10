@@ -1,5 +1,7 @@
 # Laravel Pivot
 
+> Maintained fork of [fico7489/laravel-pivot](https://github.com/fico7489/laravel-pivot), which is no longer maintained. From 4.x it is published as `always-open/laravel-pivot`. The PHP namespace (`Fico7489\Laravel\Pivot`) is unchanged, so switching only means changing the Composer package name.
+
 This package introduces new eloquent events for sync(), attach(), detach() or updateExistingPivot() methods on  BelongsToMany relation.
 
 ## Laravel Problems
@@ -10,7 +12,8 @@ In Laravel events are not dispatched when BelongsToMany relation (pivot table) i
 
 | Laravel Version | Package Tag | Supported | Development Branch
 |-----------------|-------------|-----------| -----------|
-| >= 5.5.0 | 3.* | yes | master
+| 12.x, 13.x      | 4.*         | yes       | 4.x
+| >= 5.5.0        | 3.* (fico7489/laravel-pivot) | no | master
 | < 5.5.0 | - | no | -
 
 * you still can use inactive branches for laravel 5.4.x or older
@@ -19,7 +22,7 @@ In Laravel events are not dispatched when BelongsToMany relation (pivot table) i
 
 1.Install package with composer
 ```
-composer require fico7489/laravel-pivot
+composer require always-open/laravel-pivot
 ```
 With this statement, a composer will install highest available package version for your current laravel version.
 

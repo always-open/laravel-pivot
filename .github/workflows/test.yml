@@ -5,18 +5,26 @@ on:
   push:
     branches:
       - master
+      - 4.x
 
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        php_version: [7.4, 8.2, 8.3]
-        laravel_version: [5.5.*, 10.*, 11.*, 12.*]
+        php_version: [8.2, 8.3, 8.4, 8.5]
+        laravel_version: [12.*, 13.*]
+        # Laravel 13 requires PHP 8.3+.
+        exclude:
+          - php_version: 8.2
+            laravel_version: 13.*
+
+    name: PHP ${{ matrix.php_version }} - Laravel ${{ matrix.laravel_version }}
 
     steps:
       - name: Checkout commit
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -24,16 +32,15 @@ jobs:
           php-version: ${{ matrix.php_version }}
 
       - name: Validate composer.json
-        run: composer validate
+        run: composer validate --strict
 
-      - name: Run composer install
-        run: composer install --no-interaction --no-suggest
+      - name: Install dependencies
+        run: |
+          composer require "illuminate/database:${{ matrix.laravel_version }}" --no-interaction --no-update
+          composer update --prefer-stable --prefer-dist --no-interaction
 
       - name: CS fixer
-        run: vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix
-
-      - name: Install Laravel
-        run: composer update --no-interaction illuminate/database:${{ matrix.laravel_version }}
+        run: vendor/bin/php-cs-fixer fix --dry-run --diff
 
       - name: Run PHPUnit
-        run: ./vendor/bin/phpunit
+        run: vendor/bin/phpunit
