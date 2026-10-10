@@ -10,8 +10,7 @@ trait FiresPivotEventsTrait
     /**
      * Attach a model to the parent.
      *
-     * @param mixed $id
-     * @param bool  $touch
+     * @param bool $touch
      */
     public function attach($ids, array $attributes = [], $touch = true)
     {
@@ -30,8 +29,7 @@ trait FiresPivotEventsTrait
     /**
      * Detach models from the relationship.
      *
-     * @param mixed $ids
-     * @param bool  $touch
+     * @param bool $touch
      *
      * @return int
      */
@@ -56,8 +54,7 @@ trait FiresPivotEventsTrait
     /**
      * Update an existing pivot record on the table.
      *
-     * @param mixed $id
-     * @param bool  $touch
+     * @param bool $touch
      *
      * @return int
      */
@@ -79,7 +76,6 @@ trait FiresPivotEventsTrait
      * Cleans the ids and ids with attributes
      * Returns an array with and array of ids and array of id => attributes.
      *
-     * @param mixed $id
      * @param array $attributes
      *
      * @return array
